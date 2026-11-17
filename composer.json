@@ -1,0 +1,65 @@
+{
+    "name": "saizul/wp-debloat",
+    "description": "Debloat & Harden: turn off WordPress bloat and close common information leaks with safe, individually switchable tweaks. Presets, import/export and WP-CLI.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "keywords": [
+        "wordpress",
+        "debloat",
+        "performance",
+        "security",
+        "hardening",
+        "xml-rpc",
+        "emoji",
+        "wp-cli"
+    ],
+    "homepage": "https://github.com/saizul/wp-debloat",
+    "authors": [
+        {
+            "name": "Saizul Amin",
+            "homepage": "https://saizul.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/saizul/wp-debloat/issues",
+        "source": "https://github.com/saizul/wp-debloat"
+    },
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "phpunit/phpunit": "^9.6",
+        "squizlabs/php_codesniffer": "^3.9",
+        "wp-coding-standards/wpcs": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Saizul\\Debloat\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Saizul\\Debloat\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "lint": "find . -name '*.php' -not -path './vendor/*' -print0 | xargs -0 -n1 php -l",
+        "phpcs": "phpcs",
+        "phpcbf": "phpcbf",
+        "make-pot": "php bin/make-pot.php",
+        "readme": "php bin/gen-readme-table.php",
+        "readme-check": "php bin/gen-readme-table.php --check"
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "7.4.33"
+        },
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

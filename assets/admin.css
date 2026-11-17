@@ -1,0 +1,76 @@
+/* Debloat & Harden settings screen. */
+.wp-debloat-intro { font-size: 14px; }
+
+.wp-debloat-presets,
+.wp-debloat-transfer {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	padding: 4px 16px 12px;
+	margin: 16px 0;
+	max-width: 960px;
+}
+
+.wp-debloat-preset-list { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+.wp-debloat-preset { display: flex; align-items: center; gap: 8px; }
+
+.wp-debloat-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 16px;
+	margin: 16px 0 8px;
+}
+
+.wp-debloat-count { color: #646970; }
+
+.wp-debloat-group { max-width: 960px; }
+.wp-debloat-group[hidden] { display: none; }
+
+.wp-debloat-tweaks {
+	margin: 0;
+	background: #fff;
+	border: 1px solid #c3c4c7;
+}
+
+.wp-debloat-tweak {
+	display: flex;
+	gap: 12px;
+	margin: 0;
+	padding: 12px 16px;
+	border-bottom: 1px solid #f0f0f1;
+}
+
+.wp-debloat-tweak:last-child { border-bottom: 0; }
+.wp-debloat-tweak[hidden] { display: none; }
+.wp-debloat-tweak.is-on { background: #f6fbf6; }
+
+.wp-debloat-toggle { padding-top: 2px; }
+.wp-debloat-body { flex: 1; min-width: 0; }
+.wp-debloat-body .description { margin: 4px 0 0; }
+
+.wp-debloat-title { font-weight: 600; font-size: 14px; margin-right: 8px; }
+
+.wp-debloat-risk {
+	display: inline-block;
+	border-radius: 999px;
+	padding: 0 8px;
+	font-size: 11px;
+	line-height: 18px;
+	font-weight: 600;
+	vertical-align: middle;
+}
+
+.wp-debloat-risk-low { background: #edfaef; color: #00450c; }
+.wp-debloat-risk-medium { background: #fcf9e8; color: #614200; }
+.wp-debloat-risk-high { background: #fcf0f1; color: #8a2424; }
+
+.wp-debloat-id { font-size: 11px; margin-left: 4px; color: #50575e; }
+.wp-debloat-field { margin: 8px 0 0; }
+.wp-debloat-presets-of { margin: 4px 0 0; color: #646970; font-size: 12px; }
+
+.wp-debloat-notice {
+	margin: 8px 0 0;
+	padding: 6px 10px;
+	border-left: 4px solid #dba617;
+	background: #fcf9e8;
+}

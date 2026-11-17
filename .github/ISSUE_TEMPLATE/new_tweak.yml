@@ -1,0 +1,62 @@
+name: New tweak
+description: Propose a tweak (and say if you want to build it).
+labels: [new tweak]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Good tweaks remove something many sites do not need, or close an information leak, and can be undone by switching them off.
+        See the guide: https://github.com/saizul/wp-debloat#add-a-new-tweak
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      placeholder: Remove the X-Powered-By header
+    validations:
+      required: true
+  - type: dropdown
+    id: group
+    attributes:
+      label: Group
+      options:
+        - Performance
+        - Security and hardening
+        - Content
+        - Admin
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What it does and why
+      description: Which output, request or feature it removes, and who benefits.
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: How (hooks and functions)
+      description: The WordPress hooks or functions involved, ideally with links to developer.wordpress.org.
+      placeholder: add_filter( 'xmlrpc_methods', ... )
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk
+      description: What can break when it is switched on?
+      options:
+        - Low - no visible change for visitors
+        - Medium - can break a feature some sites use
+        - High - can break forms, shops or the front end
+    validations:
+      required: true
+  - type: textarea
+    id: breaks
+    attributes:
+      label: What can break
+      description: Plugins, themes or features that may depend on what this tweak removes.
+  - type: checkboxes
+    id: build
+    attributes:
+      label: Contribution
+      options:
+        - label: I would like to open a pull request for this tweak.

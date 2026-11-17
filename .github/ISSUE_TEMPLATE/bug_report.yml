@@ -1,0 +1,48 @@
+name: Bug report
+description: A tweak breaks something, or the plugin does not work as documented.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! If the site is down, add `define( 'WP_DEBLOAT_DISABLE', true );` to wp-config.php first.
+        Please do not post passwords, keys or private URLs.
+  - type: input
+    id: tweak
+    attributes:
+      label: Tweak ID(s)
+      description: From Settings > Debloat or `wp debloat status`. Leave empty if it is not about a tweak.
+      placeholder: jquery_migrate
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What broke, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Enable ...
+        2. Visit ...
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: WordPress, PHP and plugin versions, theme, related plugins (cache, SEO, shop, forms, page builder).
+      placeholder: |
+        WordPress 7.0, PHP 8.3, Debloat & Harden 0.1.0
+        Theme: ...
+        Plugins: ...
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Output of `wp debloat status --format=json` (optional)
+      render: json
